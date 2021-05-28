@@ -1,14 +1,17 @@
-import React from 'react'
-import GlobalStyle from './utils/global-style';
+import React from "react";
+import GlobalStyle from "./utils/global-style";
+
+import { Dashboard } from "./modules/dashboard/Dashboard";
 
 const App = () => {
-
   return (
     <>
-    <GlobalStyle />
-    <h1>App</h1>
+      <GlobalStyle />
+      <Dashboard />
     </>
-  )
-}
+  );
+};
 
-export default App
+App.displayName = "App";
+
+export default App;

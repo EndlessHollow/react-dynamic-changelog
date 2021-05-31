@@ -53,6 +53,10 @@ const StyledRemoveIcon = styled(RemoveIcon)<{ size: number }>`
   fill: ${red};
 `;
 
+const CodeBlock = styled.code`
+  overflow: scroll;
+`;
+
 export const Card: FunctionComponent<CardProps> = (props) => {
   const { iconType, diff } = props;
   const {
@@ -72,22 +76,22 @@ export const Card: FunctionComponent<CardProps> = (props) => {
 
       <Subheading>{propPath.replaceAll(".", " > ")}</Subheading>
       {before && (
-        <code>
+        <CodeBlock>
           <ReactJson
             src={{ before }}
             collapsed={1}
             collapseStringsAfterLength={15}
           />
-        </code>
+        </CodeBlock>
       )}
       {after && (
-        <code>
+        <CodeBlock>
           <ReactJson
             src={{ after }}
             collapsed={1}
             collapseStringsAfterLength={15}
           />
-        </code>
+        </CodeBlock>
       )}
     </StyledCard>
   );

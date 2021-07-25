@@ -1,9 +1,7 @@
+import { Obj } from "json-schema-changelog";
 import React, { useState } from "react";
 import { fetchSchema } from "./fetch-schema";
 import { getFetchOptions } from "./get-fetch-options";
-
-//TODO: Replace when json-schema-diff provide types
-export type Obj = Record<string, unknown>;
 
 export const useFetchSchemas = () => {
   const [schemas, setSchemas] = useState<[Obj, Obj] | undefined>();

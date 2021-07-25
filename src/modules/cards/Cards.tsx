@@ -2,13 +2,10 @@ import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
 import { Card } from "./Card";
-import { getDiff } from "json-schema-changelog";
+import { getDiff, Obj } from "json-schema-changelog";
 import { grey } from "../../utils/colors";
 import { IconType } from "../types/icons";
 import breakpoints from "../../utils/breakpoints";
-
-//TODO: Replace when json-schema-diff provide types
-export type Obj = Record<string, unknown>;
 
 export interface CardsProps {
   readonly schemas: [Obj, Obj];

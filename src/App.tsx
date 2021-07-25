@@ -1,13 +1,16 @@
 import React from "react";
-import GlobalStyle from "./utils/global-style";
-
+import { ThemeProvider } from "styled-components";
 import { Dashboard } from "./modules/dashboard/Dashboard";
+import GlobalStyle from "./utils/global-style";
+import theme from "./utils/theme";
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Dashboard />
+      <ThemeProvider theme={theme}>
+        <Dashboard />
+      </ThemeProvider>
     </>
   );
 };

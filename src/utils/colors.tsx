@@ -1,9 +1,11 @@
-export const black = 'hsl(225,6%,13%)';
-export const white = 'hsl(0,0%,100%)';
-export const grey = 'hsl(213,5%,39%)';
-export const red = 'hsl(3, 76.5%, 60%)'
-export const green = 'hsl(143, 55.5%, 51.6%)';
-export const blue = 'hsl(212, 82.4%, 64.3%)';
-export const yellow = 'hsl(50, 100%, 46.9%)';
+export type Colors = typeof colors;
 
-
+export const colors = {
+  black: "hsl(225,6%,13%)",
+  white: "hsl(0,0%,100%)",
+  grey: "hsl(213,5%,39%)",
+  red: "hsl(3, 76.5%, 60%)",
+  green: "hsl(143, 55.5%, 51.6%)",
+  blue: "hsl(212, 82.4%, 64.3%)",
+  yellow: "hsl(50, 100%, 46.9%)",
+};

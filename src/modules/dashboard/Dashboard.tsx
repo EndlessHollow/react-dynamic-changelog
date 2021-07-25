@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-
-import { black } from "../../utils/colors";
+import { useFetchSchemas } from "../../utils/use-fetch-schema";
 import { Cards } from "../cards/Cards";
 import { Loader } from "../loader/Loader";
-import { useFetchSchemas } from "../../utils/use-fetch-schema";
 
 const DashboardContainer = styled.div`
-  margin: 0 1rem;
+  margin: ${({ theme }) => `${theme.spacing[0]} ${theme.spacing[4]}`};
 `;
 
+//TODO: Font size
 const DashboardHeadline = styled.h1`
-  font-size: 2rem;
-  font-weight: 700;
-  color: ${black};
+  color: ${({ theme }) => theme.colors.black};
+  font-size: ${({ theme }) => theme.spacing[7]};
+  font-weight: ${({ theme }) => theme.fontWeight.fontBold};
+  margin-bottom: ${({ theme }) => theme.spacing[8]};
   text-align: center;
-  margin-bottom: 2rem;
 `;
 
+//TODO: Make its own component and style it
 const ErrorMessage = styled.p``;
 
 export const Dashboard = () => {

@@ -660,10 +660,10 @@ json-parse-even-better-errors@^2.3.0:
   resolved "https://registry.yarnpkg.com/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz#7c47805a94319928e05777405dc12e1f7a4ee02d"
   integrity sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==
 
-json-schema-changelog@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/json-schema-changelog/-/json-schema-changelog-0.1.3.tgz#dac3e49c40542af64e1f88c6fba82f25c96200a5"
-  integrity sha512-shOq/p3sxQrz+PgahXCwzY5I8OfAM3ekrnBoEXre7O/mWGHcyUKI7xVju6bDuw9AHXgw+Hw8h0bm8QntO5tZBw==
+json-schema-changelog@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/json-schema-changelog/-/json-schema-changelog-0.1.4.tgz#c4a1d50160071626377e440f7f10c32c5c30b652"
+  integrity sha512-X1eWKhv2cK3Es0DakruEAQKSMZXOkjvJW7c4qgf5LFGHL+EmtTCG0nrzq/7PLmaz1lVG4pWnsTXXB3dP8lMAIA==
 
 json5@^2.1.2:
   version "2.2.0"
@@ -973,10 +973,10 @@ use-latest@^1.0.0:
   dependencies:
     use-isomorphic-layout-effect "^1.0.0"
 
-vite-plugin-svgr@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-svgr/-/vite-plugin-svgr-0.2.0.tgz#ea248931897484fc2ebf533d4a9d6acef37ab437"
-  integrity sha512-dVikufkAzzZDE09hsfz0RrNRPlMi5H0aSVa14WWE55tuG3WQT3r/znf/iEW1WJmXqn/Tzz/ON4wMjJztLV0UeQ==
+vite-plugin-svgr@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-svgr/-/vite-plugin-svgr-0.3.0.tgz#c81ac7541df98d361249f9ac06b901ae22744a1b"
+  integrity sha512-C3g+lbn0dsSL+QERO+WGXYv3qdc0Fwa4MC+Lk6hGM7wlvRXU7C1kzITjFkO+Zai8Cymrt+5uZYHJhxiQ96shtw==
   dependencies:
     "@svgr/core" "^5.5.0"
 

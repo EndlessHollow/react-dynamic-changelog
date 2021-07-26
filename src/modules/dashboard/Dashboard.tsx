@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useFetchSchemas } from "../../utils/use-fetch-schema";
 import { Cards } from "../cards/Cards";
 import { Loader } from "../loader/Loader";
+import { Error } from "../error/Error";
 
 const DashboardContainer = styled.div`
   margin: ${({ theme }) => `${theme.spacing[0]} ${theme.spacing[4]}`};
@@ -17,9 +18,6 @@ const DashboardHeadline = styled.h1`
   text-align: center;
 `;
 
-//TODO: Make its own component and style it
-const ErrorMessage = styled.p``;
-
 export const Dashboard = () => {
   const { loading, schemas, error } = useFetchSchemas();
 
@@ -28,7 +26,7 @@ export const Dashboard = () => {
       <DashboardHeadline>Schema Differences</DashboardHeadline>
       {loading && <Loader />}
       {schemas && <Cards schemas={schemas} />}
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+      {error && <Error error={error} />}
     </DashboardContainer>
   );
 };

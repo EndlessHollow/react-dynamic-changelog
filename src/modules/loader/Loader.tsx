@@ -1,20 +1,20 @@
 import React, { FunctionComponent } from "react";
 import styled, { keyframes } from "styled-components";
+import { Opacity } from "../../utils/opacity";
 
 export interface LoaderProps {
   readonly size?: number;
 }
 
-//TODO: Figure out how to pass opacity from theme
-const ripple = keyframes`
+const ripple = (opacity: Opacity) => keyframes`
   from {
     transform: scale(0);
-    opacity: 1;
+    opacity: ${opacity[100]};
   }
 
   to {
     transform: scale(1);
-    opacity: 0;
+    opacity: ${opacity[0]};;
   }
 `;
 
@@ -25,7 +25,7 @@ const Wave = styled.div`
   border-radius: 50%;
   border: ${({ theme }) =>
     `${theme.spacing["1.5"]} solid ${theme.colors.black}`};
-  animation: 1.5s ${ripple} infinite;
+  animation: ${({ theme }) => `1.5s ${ripple(theme.opacity)} infinite;`};
 `;
 
 const StyledLoader = styled.div<{ size: number }>`

@@ -4,53 +4,53 @@ import styled from "styled-components";
 import { ReactComponent as PlusIcon } from "../../assets/plus.svg";
 import { ReactComponent as RemoveIcon } from "../../assets/remove.svg";
 import { ReactComponent as ShuffleIcon } from "../../assets/shuffle.svg";
-import { black, green, grey, red, yellow } from "../../utils/colors";
 import { IconType } from "../types/icons";
 
+//TODO: Finish types for diff
 export interface CardProps {
   iconType: IconType;
   diff: any;
 }
 
 const StyledCard = styled.div`
-  display: grid;
-  row-gap: 0.5rem;
-  padding: 1.5rem;
-  border-radius: 0.625rem;
+  border-radius: ${({ theme }) => theme.spacing[2.5]};
   box-shadow: 0.25rem 0.75rem 2.9375rem 0 rgb(0 0 0 / 10%);
+  display: grid;
+  padding: ${({ theme }) => theme.spacing[6]};
+  row-gap: ${({ theme }) => theme.spacing[2]};
 `;
 
 const HeadlineContainer = styled.div`
+  align-items: center;
+  color: ${({ theme }) => theme.colors.black};
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: ${black};
 `;
 
 const Headline = styled.div`
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.fontMedium};
 `;
 
 const Subheading = styled.div`
-  color: ${grey};
+  color: ${({ theme }) => theme.colors.grey};
 `;
 
 const StyledAddIcon = styled(PlusIcon)<{ size: number }>`
-  width: ${({ size }) => `${size}rem`};
+  fill: ${({ theme }) => theme.colors.green};
   height: ${({ size }) => `${size}rem`};
-  fill: ${green};
+  width: ${({ size }) => `${size}rem`};
 `;
 
 const StyledShuffleIcon = styled(ShuffleIcon)<{ size: number }>`
-  width: ${({ size }) => `${size}rem`};
+  fill: ${({ theme }) => theme.colors.yellow};
   height: ${({ size }) => `${size}rem`};
-  fill: ${yellow};
+  width: ${({ size }) => `${size}rem`};
 `;
 
 const StyledRemoveIcon = styled(RemoveIcon)<{ size: number }>`
-  width: ${({ size }) => `${size}rem`};
+  fill: ${({ theme }) => theme.colors.red};
   height: ${({ size }) => `${size}rem`};
-  fill: ${red};
+  width: ${({ size }) => `${size}rem`};
 `;
 
 const CodeBlock = styled.code`

@@ -1,11 +1,8 @@
+import { getDiff, Obj } from "json-schema-changelog";
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
-
-import { Card } from "./Card";
-import { getDiff, Obj } from "json-schema-changelog";
-import { grey } from "../../utils/colors";
 import { IconType } from "../types/icons";
-import breakpoints from "../../utils/breakpoints";
+import { Card } from "./Card";
 
 export interface CardsProps {
   readonly schemas: [Obj, Obj];
@@ -18,23 +15,24 @@ const CardsContainer = styled.div`
 
 const CardsWrapper = styled.div`
   width: 100%;
-  padding: 0 0.5rem;
+  padding: ${({ theme }) => `${theme.spacing[0]} ${theme.spacing[2]}`};
 
-  @media (min-width: ${breakpoints.mobileDevice}) {
-    width: calc(50% - 1rem);
+  @media (min-width: ${({ theme }) => theme.screens.sm}) {
+    width: ${({ theme }) => `calc(50% - ${theme.spacing[4]})`};
   }
 
   & > div {
-    margin-bottom: 1rem;
+    margin-bottom: ${({ theme }) => theme.spacing[4]};
   }
 `;
 
+//TODO: Fix font-size
 const CardsHeadline = styled.h2`
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: ${grey};
+  font-size: ${({ theme }) => theme.spacing[5]};
+  font-weight: ${({ theme }) => theme.fontWeight.fontMedium};
+  color: ${({ theme }) => theme.colors.grey};
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: ${({ theme }) => theme.spacing[5]};
 `;
 
 const StyledText = styled.p`
@@ -48,9 +46,6 @@ export const Cards: FunctionComponent<CardsProps> = (props) => {
   const additions = diffMaps.additions;
   const removals = diffMaps.removals;
   const changes = diffMaps.changes;
-
-  console.log("additions", additions);
-  console.log("changes", changes);
 
   return (
     <CardsContainer>

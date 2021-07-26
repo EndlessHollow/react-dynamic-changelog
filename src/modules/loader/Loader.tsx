@@ -1,12 +1,11 @@
 import React, { FunctionComponent } from "react";
 import styled, { keyframes } from "styled-components";
 
-import { black } from "../../utils/colors";
-
 export interface LoaderProps {
   readonly size?: number;
 }
 
+//TODO: Figure out how to pass opacity from theme
 const ripple = keyframes`
   from {
     transform: scale(0);
@@ -24,7 +23,8 @@ const Wave = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 0.3rem solid ${black};
+  border: ${({ theme }) =>
+    `${theme.spacing["1.5"]} solid ${theme.colors.black}`};
   animation: 1.5s ${ripple} infinite;
 `;
 

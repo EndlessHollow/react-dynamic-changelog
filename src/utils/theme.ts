@@ -3,6 +3,7 @@ import { screens } from "./screens";
 import { colors } from "./colors";
 import { spacing } from "./spacing";
 import { opacity } from "./opacity";
+import { fontSize } from "./font-size";
 import { fontWeight } from "./font-weight";
 
 const theme: DefaultTheme = {
@@ -10,6 +11,7 @@ const theme: DefaultTheme = {
   colors,
   spacing,
   opacity,
+  fontSize,
   fontWeight,
 };
 

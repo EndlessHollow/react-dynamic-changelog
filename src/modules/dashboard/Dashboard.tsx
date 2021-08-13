@@ -9,10 +9,9 @@ const DashboardContainer = styled.div`
   margin: ${({ theme }) => `${theme.spacing[0]} ${theme.spacing[4]}`};
 `;
 
-//TODO: Font size
 const DashboardHeadline = styled.h1`
   color: ${({ theme }) => theme.colors.black};
-  font-size: ${({ theme }) => theme.spacing[7]};
+  font-size: ${({ theme }) => theme.fontSize["text-2xl"]};
   font-weight: ${({ theme }) => theme.fontWeight.fontBold};
   margin-bottom: ${({ theme }) => theme.spacing[8]};
   text-align: center;

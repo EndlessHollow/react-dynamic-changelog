@@ -26,9 +26,8 @@ const CardsWrapper = styled.div`
   }
 `;
 
-//TODO: Fix font-size
 const CardsHeadline = styled.h2`
-  font-size: ${({ theme }) => theme.spacing[5]};
+  font-size: ${({ theme }) => theme.fontSize["text-xl"]};
   font-weight: ${({ theme }) => theme.fontWeight.fontMedium};
   color: ${({ theme }) => theme.colors.grey};
   text-align: center;

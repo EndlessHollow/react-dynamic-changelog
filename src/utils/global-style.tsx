@@ -1,4 +1,4 @@
-import { css, createGlobalStyle } from 'styled-components'
+import { css, createGlobalStyle } from "styled-components";
 
 // prettier-ignore
 export const reset = css`
@@ -36,7 +36,9 @@ footer, header, hgroup, main, menu, nav, section {
     display: none;
 }
 body {
-  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }
 menu, ol, ul {
   list-style: none;
@@ -55,6 +57,6 @@ table {
 }
 `
 
-const GlobalStyle = createGlobalStyle`${reset}`
+const GlobalStyle = createGlobalStyle`${reset}`;
 
 export default GlobalStyle;
